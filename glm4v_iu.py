@@ -20,7 +20,6 @@ def image_description(input_path, output_data_path, params):
         output_dir = os.path.dirname(os.path.join(output_data_path, rel_path))
         os.makedirs(output_dir, exist_ok=True)
 
-        
         if total_files <= 20 or index % 20 == 0 or index in [1, total_files]:
             logger.info(f"Processing {index}/{total_files}: {file_path}", extra={"event_type": "EventType.METRICS", "total files": total_files,  "current": index})
         
